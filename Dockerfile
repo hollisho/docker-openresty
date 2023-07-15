@@ -1,5 +1,5 @@
 # 基础镜像
-FROM hollisho/centos:latest
+FROM hollisho/openresty:1.21.4
 
 # 维护者
 MAINTAINER Hollis Ho "he_wenzhi@126.com"
@@ -14,10 +14,10 @@ WORKDIR /usr/local/src
 ADD https://openresty.org/download/openresty-1.15.8.2.tar.gz .
 
 # RUN，在镜像内运行解压命令
-RUN tar zxvf openresty-1.15.8.2.tar.gz
+RUN tar zxvf openresty-1.21.4.1.tar.gz
 
 # 切换目录
-WORKDIR /usr/local/src/openresty-1.15.8.2
+WORKDIR /usr/local/src/openresty-1.21.4.1
 
 # 更新yum，可不执行
 #RUN yum -y update 
